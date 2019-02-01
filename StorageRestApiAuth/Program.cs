@@ -32,8 +32,8 @@
         private static async Task ListContainersAsyncREST(string storageAccountName, string storageAccountKey, CancellationToken cancellationToken)
         {
 
-            // Construct the URI. This will look like this:
-            //   https://myaccount.blob.core.windows.net/resource
+            // Construct the URI. 
+            // **Update to https if you have 'Secure transfer required' enabled on your Azure storage account.**
             String uri = string.Format("http://{0}.blob.core.windows.net?comp=list", storageAccountName);
 
             // Set this to whatever payload you desire. Ours is null because 
